@@ -1,0 +1,268 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+  }
+  
+  * {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  body::before {
+    z-index:-2;
+    content:"";
+    inset:0;
+    background-size: 200%;
+  scale:260%;
+    border:2px red solid;
+    position: absolute;
+    background: url('../images/stars3.gif') no-repeat top center; 
+    overflow: hidden;
+    opacity: 1;
+    mix-blend-mode:color-dodge;
+  }
+  body::after {
+    z-index:-1;
+    content: "";
+    position: absolute;
+    inset:0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.995), rgba(0, 0, 0, 0.258));
+  }
+  body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+  background: rgb(16, 16, 16) ;
+  overflow: hidden;
+  background-size: cover;
+  
+  }
+  
+  .reg-container {
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  position: relative;
+  
+   min-width:500px;
+   min-height:595px;
+  }
+
+
+  h1 {
+    color:rgba(255, 255, 255, 0.808);
+    font-family: tw cen mt condensed;
+    font-weight: 1;
+    text-align: center;
+    font-size: 40px;
+    margin-top:-15px;
+    margin-bottom:15px;
+    
+  }
+
+  .reg-form {
+ animation: FadeIn forwards 1s;
+  position: relative;
+      min-width: 600px;
+      max-height:450px;
+      margin: 0 auto;
+      border:rgb(93, 93, 93) 1px solid;
+   
+      justify-content: center;
+      align-items: center;
+      background:rgba(31, 31, 31, 0.151);
+      border-radius: 15px;
+      flex-direction: row;
+      box-shadow: 0px 0px 8px rgb(129, 3, 255);
+      backdrop-filter:blur(5px);
+  
+    }
+
+  .display-1 {
+  display:none;
+    }
+
+  .display-2 {
+  display:flex;
+    } 
+     
+    @keyframes FadeIn {
+        0% {
+            opacity:0;
+            margin-left:-1100px;
+        }
+        100% {
+            opacity:1;
+            margin-left:0px;
+            z-index:10;
+        }
+      }
+      @keyframes FadeOut {
+        0% {
+               opacity:1;
+            margin-left:0px;
+        }
+        100% {
+            z-index:-5;
+            opacity:0;
+            margin-left:-1100px;
+            
+        }
+      }
+      .reg-form > :nth-child(1) {
+        margin-bottom:40px;
+        position: absolute;
+        right:0;
+        top:0;
+        margin-right:15px;
+      justify-content: right;
+       font-size: 30px;
+       text-align: center;
+    min-width:60px;
+    min-height:60px;
+    
+   
+       
+   
+      }
+
+      .register-exit {
+        padding-right:14px;
+       padding-top:1px;
+        padding-left:14px;
+        padding-bottom:1px;
+       font-weight: bold;
+       position: absolute;
+        color:#402566;
+        text-decoration: none;
+        background: none;
+        transition: ease-in-out .3s;
+      }
+  .reg-form >:nth-child(2){
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+
+
+  }
+
+  .reg-form >:nth-child(3){
+ 
+   
+    flex: 1 1 50%;
+    display:flex;
+    justify-content: center;
+   
+    flex-direction: column;
+  }
+  .col {
+ 
+    min-width:250px;
+  }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color:rgb(175, 175, 175);
+      font-size: 14px;
+      font-family: calibri;
+      margin-left: 0;
+    }
+
+   .reg-inner-container > :nth-child(1) {
+    
+    
+      background-size:50%;
+      min-height:60px;
+      
+     
+   } 
+   .reg-inner-container >:nth-child(2) {
+    justify-content: left;
+   margin-top:-6px;
+   
+   }
+  
+
+  .reg-inner-container-2,
+  .reg-inner-container {
+    
+    padding: 40px;
+  }
+  .reg-inner-container-2 >:nth-child(4) {
+    justify-content: right;
+    display: flex;
+  }
+  .register-btn {
+    text-decoration: none;
+    color:#611FC7;
+    transition: ease-in-out .1s;
+  }
+  .register-btn:hover {
+    color:white;
+  }
+   #username, #password, #psw-repeat,
+   #contact, #email {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+     
+      border-radius: 10px;
+      text-decoration: none;
+      transition: ease-in-out .2s;
+      background:none;
+     
+    }
+    #username:focus,
+    #password:focus {
+      padding-top:20px;
+      color:#611FC7;
+    }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+  color:rgb(234, 233, 233);
+  
+    outline: none;
+    transition: ease-in-out .2s;
+  }
+  input:focus {
+    
+  
+    outline: none;
+  
+  }
+   #register {
+      min-width: 100px;
+      background-color: #611FC7;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    
+      transition: ease-in-out .1s;
+     
+    }
+  
+    #register:hover {
+      background-color: #8f45ff;
+    }
+    
+    .register-exit:hover {
+      transform: rotate(180deg);
+      scale:105%;
+      color:#ff0000;
+      background:rgba(255, 255, 255, 0.066);
+      border-radius: 0 0 0 20px ;
+    }

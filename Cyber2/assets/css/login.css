@@ -1,0 +1,217 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+body::before {
+  z-index:-2;
+  content:"";
+  inset:0;
+  background-size: 200%;
+scale:260%;
+  border:2px red solid;
+  position: absolute;
+  background: url(../images/stars3.gif) no-repeat top center; 
+  overflow: hidden;
+  opacity: 1;
+  mix-blend-mode:color-dodge;
+}
+body::after {
+  z-index:-1;
+  content: "";
+  position: absolute;
+  inset:0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.995), rgba(0, 0, 0, 0.258));
+}
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+background: rgb(16, 16, 16) ;
+overflow: hidden;
+background-size: cover;
+
+}
+
+.login-container {
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+position: relative;
+
+ min-width:500px;
+ min-height:595px;
+}
+
+
+.login-form {
+position: relative;
+    min-width: 400px;
+    min-height:450px;
+    margin: 0 auto;
+    border:rgb(93, 93, 93) 1px solid;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(31, 31, 31, 0.151);
+    border-radius: 15px;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px rgb(129, 3, 255);
+    backdrop-filter:blur(5px);
+    
+  }
+
+
+.col {
+  min-width:250px;
+}
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color:rgb(175, 175, 175);
+    font-size: 14px;
+    font-family: calibri;
+    margin-left: 0;
+  }
+
+ .login-inner-container > :nth-child(1) {
+ 
+   background: url(../images/cyber+logo.png) no-repeat center;
+    background-size:50%;
+    min-height:60px;
+    margin-bottom:20px;
+  
+ } 
+ .login-inner-container >:nth-child(2) {
+  justify-content: left;
+  
+ }
+ .login-inner-container > :nth-child(4)  {
+  margin-bottom:10px; 
+  text-align: center;
+
+  font-size:10px;
+}
+.login-inner-container > :nth-child(5)  {
+  margin-top:5px; 
+  text-align: center;
+  color:rgb(168, 168, 168);
+  font-size:10px;
+}
+.login-inner-container > :nth-child(6)  {
+  margin-top:5px; 
+  text-align: center;
+  color:rgb(168, 168, 168);
+  font-size:10px;
+}
+
+.register-btn,
+.forgot-btn {
+ 
+  text-decoration: none;
+  color:#611FC7;
+  transition: ease-in-out .1s;
+}
+.register-btn:hover,
+.forgot-btn:hover {
+  color:white;
+}
+
+
+  
+ #username, #password,
+  #login-username, #login-password {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+   
+    border-radius: 10px;
+    text-decoration: none;
+    transition: ease-in-out .2s;
+    background:none;
+   
+  }
+  #username:focus,
+  #password:focus,
+    #login-username:focus, 
+    #login-password:focus {
+    padding-top:20px;
+    color:#611FC7;
+  }
+.login-inner-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width:400px;
+}
+input {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+color:rgb(234, 233, 233);
+
+  outline: none;
+  transition: ease-in-out .2s;
+}
+input:focus {
+  
+
+  outline: none;
+
+}
+ #login {
+    max-width: 200px;
+    background-color: #611FC7;
+    color: white;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin:-15px auto -5px auto;
+    transition: ease-in-out .1s;
+    position: relative;
+  }
+
+  #login:hover {
+    background-color: #8f45ff;
+  }
+  .login-exit {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom:40px;
+    font-weight: bold;
+    position: absolute;
+    right:0;
+   top:0;
+   padding-right:14px;
+  padding-top:1px;
+  padding-left:14px;
+  padding-bottom:1px;
+    background: none;
+    transition: ease-in-out .3s;
+    color:#402566;
+    text-decoration: none;
+ 
+  }
+  .login-exit:hover {
+    transform: rotate(180deg);
+    scale:105%;
+    color:#ff0000;
+    background:rgba(255, 255, 255, 0.066);
+    border-radius: 0 0 0 15px ;
+  }
